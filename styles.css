@@ -394,7 +394,7 @@ h2 em {
 }
 
 .portrait-wrap {
-  width: min(100%, 500px);
+  width: min(88%, 390px);
   justify-self: center;
 }
 
@@ -1052,7 +1052,7 @@ blockquote p {
   }
 
   .portrait-wrap {
-    width: min(88%, 480px);
+    width: min(80%, 340px);
   }
 
   .portrait-orbit {
