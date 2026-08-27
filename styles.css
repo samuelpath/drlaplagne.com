@@ -214,13 +214,14 @@ sup {
 }
 
 .hero {
+  --hero-top: clamp(9rem, 14vh, 11rem);
   position: relative;
   display: grid;
   min-height: 100vh;
   grid-template-columns: minmax(0, 1.08fr) minmax(330px, 0.72fr);
   column-gap: clamp(3rem, 8vw, 9rem);
   align-items: center;
-  padding: clamp(9rem, 14vh, 11rem) var(--page-x) clamp(5rem, 9vw, 8rem);
+  padding: var(--hero-top) var(--page-x) clamp(5rem, 9vw, 8rem);
   overflow: hidden;
 }
 
@@ -1025,9 +1026,16 @@ blockquote p {
   }
 }
 
+@media (min-width: 781px) {
+  .hero {
+    grid-template-rows: minmax(calc(100vh - var(--hero-top)), auto) auto;
+    align-items: start;
+  }
+}
+
 @media (min-width: 781px) and (max-height: 900px) {
   .hero {
-    padding-top: 7rem;
+    --hero-top: 7rem;
   }
 
   h1 {
