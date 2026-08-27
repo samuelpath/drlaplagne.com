@@ -685,10 +685,84 @@ blockquote p {
   max-width: 900px;
 }
 
+.booking-title > p {
+  max-width: 610px;
+  margin: 2rem 0 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+
+.booking-contact {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2.5rem, 7vw, 7rem);
+  align-items: center;
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+.booking-contact-copy > p:last-child {
+  max-width: 480px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.booking-contact-action {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.button-contact {
+  width: 100%;
+  justify-content: space-between;
+  color: var(--white);
+  background: var(--ink);
+}
+
+.button-contact:hover,
+.button-contact:focus-visible {
+  background: var(--copper);
+}
+
+.plain-email {
+  margin-top: 1.25rem;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  text-underline-offset: 0.3rem;
+}
+
+.booking-contact-action small {
+  margin-top: 0.5rem;
+  color: var(--ink-soft);
+  font-size: 0.7rem;
+}
+
+.journey-heading {
+  display: grid;
+  grid-template-columns: 0.55fr 1.45fr;
+  gap: 3rem;
+  align-items: end;
+  margin-top: clamp(5rem, 9vw, 8rem);
+}
+
+.journey-heading .panel-label {
+  margin: 0;
+}
+
+.journey-heading h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2.3rem, 4.5vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
 .journey {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: clamp(4rem, 7vw, 6rem) 0 0;
+  margin: 2.5rem 0 0;
   border-top: 1px solid var(--line);
 }
 
@@ -733,6 +807,32 @@ blockquote p {
   margin-top: 1rem;
   color: var(--paper-soft);
   background: var(--ink);
+}
+
+.pricing-panel {
+  grid-template-columns: 1fr;
+}
+
+.pricing-panel .pricing {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.55fr) minmax(0, 1fr);
+  gap: 2.5rem clamp(3rem, 8vw, 8rem);
+}
+
+.pricing-panel .panel-label {
+  margin: 0;
+}
+
+.pricing-panel .price-list {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin: 0;
+}
+
+.pricing-panel .coverage-note {
+  grid-column: 1;
+  align-self: end;
+  margin: 0;
 }
 
 .pricing,
@@ -820,49 +920,6 @@ blockquote p {
   line-height: 1;
 }
 
-.contact-card > p:not(.panel-label) {
-  max-width: 480px;
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: 0.88rem;
-}
-
-.email-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 0;
-  margin-top: 2.5rem;
-  border-bottom: 1px solid var(--ink);
-  font-family: var(--serif);
-  font-size: clamp(1rem, 2vw, 1.45rem);
-  text-decoration: none;
-}
-
-.email-arrow {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
-  border: 1px solid var(--ink);
-  border-radius: 50%;
-  transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
-}
-
-.email-link:hover .email-arrow,
-.email-link:focus-visible .email-arrow {
-  color: var(--white);
-  background: var(--ink);
-  transform: rotate(45deg);
-}
-
-.contact-card > small {
-  display: block;
-  margin-top: 1rem;
-  color: var(--ink-soft);
-  font-size: 0.68rem;
-}
 
 .site-footer {
   display: grid;
@@ -1120,6 +1177,24 @@ blockquote p {
     padding-left: calc(18% + 1rem);
   }
 
+  .booking-contact,
+  .journey-heading {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .pricing-panel .pricing {
+    display: block;
+  }
+
+  .pricing-panel .price-list {
+    margin-top: 2.5rem;
+  }
+
+  .pricing-panel .coverage-note {
+    margin-top: 3rem;
+  }
+
   .journey {
     grid-template-columns: 1fr;
   }
@@ -1185,9 +1260,6 @@ blockquote p {
     margin-left: calc(-1 * var(--page-x));
   }
 
-  .email-link {
-    font-size: 1rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
