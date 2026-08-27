@@ -214,14 +214,13 @@ sup {
 }
 
 .hero {
-  --hero-top: clamp(9rem, 14vh, 11rem);
   position: relative;
   display: grid;
-  min-height: 100vh;
+  min-height: 100svh;
   grid-template-columns: minmax(0, 1.08fr) minmax(330px, 0.72fr);
   column-gap: clamp(3rem, 8vw, 9rem);
   align-items: center;
-  padding: var(--hero-top) var(--page-x) clamp(5rem, 9vw, 8rem);
+  padding: clamp(6.5rem, 12vh, 8rem) var(--page-x) clamp(3rem, 6vh, 4rem);
   overflow: hidden;
 }
 
@@ -300,7 +299,7 @@ h2 {
 
 h1 {
   max-width: 850px;
-  font-size: clamp(3.75rem, 6.2vw, 7rem);
+  font-size: clamp(4rem, 7vw, 7.3rem);
   text-wrap: balance;
 }
 
@@ -395,10 +394,9 @@ h2 em {
 }
 
 .portrait-wrap {
-  width: min(88%, 390px);
-  align-self: start;
+  width: min(92%, 430px);
+  align-self: center;
   justify-self: center;
-  margin-top: clamp(1rem, 4vh, 2.5rem);
 }
 
 .portrait-frame {
@@ -470,12 +468,17 @@ h2 em {
   to { transform: rotate(360deg); }
 }
 
+.about-section {
+  border-top: 1px solid var(--line);
+  background: var(--paper-soft);
+}
+
 .about-band {
   display: grid;
-  grid-column: 1 / -1;
+  max-width: var(--content);
   grid-template-columns: 0.55fr 1.45fr;
   gap: 3rem;
-  padding-top: clamp(7rem, 10vw, 10rem);
+  margin: 0 auto;
 }
 
 .about-band > .section-kicker {
@@ -1002,7 +1005,7 @@ blockquote p {
   }
 
   h1 {
-    font-size: clamp(4rem, 8.5vw, 6.7rem);
+    font-size: clamp(3.6rem, 7vw, 5.5rem);
   }
 
   .section-heading {
@@ -1023,41 +1026,6 @@ blockquote p {
 
   .booking-panel {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 781px) {
-  .hero {
-    grid-template-rows: minmax(calc(100vh - var(--hero-top)), auto) auto;
-    align-items: start;
-  }
-}
-
-@media (min-width: 781px) and (max-height: 900px) {
-  .hero {
-    --hero-top: 7rem;
-  }
-
-  h1 {
-    font-size: clamp(3.5rem, 5vw, 5rem);
-  }
-
-  .hero-lead {
-    margin-top: 1.4rem;
-    line-height: 1.55;
-  }
-
-  .hero-actions {
-    margin-top: 1.5rem;
-  }
-
-  .hero-signals {
-    padding-top: 1.5rem;
-    margin-top: 1.75rem;
-  }
-
-  .portrait-wrap {
-    margin-top: 1rem;
   }
 }
 
@@ -1117,6 +1085,7 @@ blockquote p {
     grid-template-columns: 1fr;
     gap: 4rem;
     padding-top: 8rem;
+    padding-bottom: 6rem;
   }
 
   h1 {
@@ -1148,7 +1117,6 @@ blockquote p {
 
   .portrait-wrap {
     width: min(80%, 340px);
-    margin-top: 0;
   }
 
   .portrait-orbit {
