@@ -299,7 +299,7 @@ h2 {
 
 h1 {
   max-width: 850px;
-  font-size: clamp(4rem, 8vw, 8.3rem);
+  font-size: clamp(3.75rem, 6.2vw, 7rem);
   text-wrap: balance;
 }
 
@@ -395,7 +395,9 @@ h2 em {
 
 .portrait-wrap {
   width: min(88%, 390px);
+  align-self: start;
   justify-self: center;
+  margin-top: clamp(1rem, 4vh, 2.5rem);
 }
 
 .portrait-frame {
@@ -1023,6 +1025,34 @@ blockquote p {
   }
 }
 
+@media (min-width: 781px) and (max-height: 900px) {
+  .hero {
+    padding-top: 7rem;
+  }
+
+  h1 {
+    font-size: clamp(3.5rem, 5vw, 5rem);
+  }
+
+  .hero-lead {
+    margin-top: 1.4rem;
+    line-height: 1.55;
+  }
+
+  .hero-actions {
+    margin-top: 1.5rem;
+  }
+
+  .hero-signals {
+    padding-top: 1.5rem;
+    margin-top: 1.75rem;
+  }
+
+  .portrait-wrap {
+    margin-top: 1rem;
+  }
+}
+
 @media (max-width: 780px) {
   html {
     scroll-padding-top: 4.5rem;
@@ -1110,6 +1140,7 @@ blockquote p {
 
   .portrait-wrap {
     width: min(80%, 340px);
+    margin-top: 0;
   }
 
   .portrait-orbit {
