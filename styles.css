@@ -139,6 +139,46 @@ sup {
   letter-spacing: -0.01em;
 }
 
+.header-actions,
+.language-switch {
+  display: flex;
+  align-items: center;
+}
+
+.header-actions {
+  gap: clamp(0.8rem, 2vw, 2rem);
+}
+
+.language-switch {
+  position: relative;
+  z-index: 2;
+  gap: 0.3rem;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.language-switch button {
+  padding: 0.15rem 0.25rem;
+  border: 0;
+  color: var(--ink-soft);
+  background: none;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.language-switch button[aria-pressed="true"] {
+  color: var(--copper);
+}
+
+.language-switch > span {
+  color: var(--line);
+  font-size: 0.7rem;
+}
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -275,8 +315,9 @@ sup {
   gap: 0.65rem;
 }
 
-.eyebrow > span {
+.eyebrow > span:first-child {
   width: 25px;
+  min-width: 25px;
   height: 1px;
   background: currentColor;
 }
@@ -393,6 +434,13 @@ h2 em {
   letter-spacing: 0.08em;
 }
 
+.hero-signals .signal-label {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
 .portrait-wrap {
   width: min(92%, 430px);
   align-self: center;
@@ -495,6 +543,30 @@ h2 em {
   margin: 2rem 0 0;
   color: var(--ink-soft);
   font-size: clamp(1rem, 1.4vw, 1.15rem);
+}
+
+.consultation-languages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.consultation-languages > span {
+  margin-right: 0.35rem;
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+}
+
+.consultation-languages strong {
+  padding: 0.42rem 0.72rem;
+  border: 1px solid var(--line);
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 500;
 }
 
 .credentials {
@@ -1036,6 +1108,14 @@ blockquote p {
 
   .site-header {
     height: 70px;
+  }
+
+  .header-actions {
+    gap: 0.35rem;
+  }
+
+  .language-switch {
+    padding: 0.28rem 0.45rem;
   }
 
   .menu-button {

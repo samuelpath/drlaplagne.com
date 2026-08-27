@@ -10,6 +10,7 @@
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_GB">
   <meta property="og:title" content="Dr Émilie Laplagne | Médecine fonctionnelle &amp; longévité">
   <meta property="og:description" content="Téléconsultations de médecine fonctionnelle, préventive et de longévité avec le Dr Émilie Laplagne.">
   <meta property="og:url" content="https://drlaplagne.com/">
@@ -29,12 +30,13 @@
     "email": "mailto:drlaplagne@gmail.com",
     "description": "Médecine préventive, fonctionnelle et de longévité.",
     "areaServed": "France",
-    "availableService": "Téléconsultation"
+    "availableService": "Téléconsultation",
+    "availableLanguage": ["French", "English", "Spanish"]
   }
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <a class="skip-link" href="#contenu" data-i18n="a11y.skip">Aller au contenu</a>
 
   <header class="site-header" data-header>
     <a class="brand" href="#accueil" aria-label="Accueil — Dr Émilie Laplagne">
@@ -42,42 +44,50 @@
       <span class="brand-name">Dr Émilie Laplagne</span>
     </a>
 
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation" data-menu-button>
-      <span class="sr-only">Ouvrir le menu</span>
-      <span></span><span></span>
-    </button>
+    <div class="header-actions">
+      <nav class="site-nav" id="navigation" aria-label="Navigation principale" data-navigation data-aria-key="a11y.nav">
+        <a href="#a-propos" data-i18n="nav.about">À propos</a>
+        <a href="#approche" data-i18n="nav.approach">Mon approche</a>
+        <a class="nav-cta" href="#rendez-vous" data-i18n="nav.book">Prendre rendez-vous</a>
+      </nav>
 
-    <nav class="site-nav" id="navigation" aria-label="Navigation principale" data-navigation>
-      <a href="#a-propos">À propos</a>
-      <a href="#approche">Mon approche</a>
-      <a class="nav-cta" href="#rendez-vous">Prendre rendez-vous</a>
-    </nav>
+      <div class="language-switch" aria-label="Choisir la langue" data-aria-key="a11y.language">
+        <button type="button" data-language="fr" aria-pressed="true">FR</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-language="en" aria-pressed="false">EN</button>
+      </div>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation" data-menu-button>
+        <span class="sr-only" data-i18n="a11y.openMenu">Ouvrir le menu</span>
+        <span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <main id="contenu">
     <section class="hero" id="accueil" aria-labelledby="hero-title">
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-content reveal">
-        <p class="eyebrow"><span></span> Médecin basée à Paris · Téléconsultations</p>
-        <h1 id="hero-title">Une médecine qui agit <em>avant</em> la maladie.</h1>
-        <p class="hero-lead">Médecine préventive, fonctionnelle et de longévité pour comprendre votre santé, identifier vos leviers d’action et construire un suivi adapté à votre vie.</p>
+        <p class="eyebrow"><span></span><span data-i18n="hero.kicker">Médecin basée à Paris · Téléconsultations</span></p>
+        <h1 id="hero-title" data-i18n="hero.title">Une médecine qui agit <em>avant</em> la maladie.</h1>
+        <p class="hero-lead" data-i18n="hero.lead">Médecine préventive, fonctionnelle et de longévité pour comprendre votre santé, identifier vos leviers d’action et construire un suivi adapté à votre vie.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#rendez-vous">Prendre rendez-vous <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="#approche">Découvrir mon approche <span aria-hidden="true">↓</span></a>
+          <a class="button button-primary" href="#rendez-vous"><span data-i18n="hero.book">Prendre rendez-vous</span><span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#approche"><span data-i18n="hero.discover">Découvrir mon approche</span><span aria-hidden="true">↓</span></a>
         </div>
-        <ul class="hero-signals" aria-label="Principes de consultation">
-          <li><span aria-hidden="true">01</span> Prévenir</li>
-          <li><span aria-hidden="true">02</span> Comprendre</li>
-          <li><span aria-hidden="true">03</span> Personnaliser</li>
+        <ul class="hero-signals" aria-label="Principes de consultation" data-aria-key="a11y.principles">
+          <li><span aria-hidden="true">01</span><span class="signal-label" data-i18n="hero.prevent">Prévenir</span></li>
+          <li><span aria-hidden="true">02</span><span class="signal-label" data-i18n="hero.understand">Comprendre</span></li>
+          <li><span aria-hidden="true">03</span><span class="signal-label" data-i18n="hero.personalize">Personnaliser</span></li>
         </ul>
       </div>
 
       <div class="portrait-wrap reveal" data-delay="1">
         <div class="portrait-frame">
-          <img src="assets/dr-emilie-laplagne.webp" alt="Portrait du Dr Émilie Laplagne" width="960" height="1200" fetchpriority="high">
+          <img src="assets/dr-emilie-laplagne.webp" alt="Portrait du Dr Émilie Laplagne" data-alt-key="image.portrait" width="960" height="1200" fetchpriority="high">
           <div class="portrait-caption">
-            <span>Médecine fonctionnelle &amp; longévité</span>
-            <small>Téléconsultations</small>
+            <span data-i18n="portrait.title">Médecine fonctionnelle &amp; longévité</span>
+            <small data-i18n="portrait.remote">Téléconsultations</small>
           </div>
         </div>
         <svg class="portrait-orbit" viewBox="0 0 120 120" aria-hidden="true">
@@ -85,31 +95,36 @@
           <circle cx="60" cy="2" r="2.5" class="orbit-dot"></circle>
         </svg>
       </div>
-
     </section>
 
     <section class="about-section section" id="a-propos" aria-labelledby="about-title">
       <div class="about-band reveal">
-        <p class="section-kicker">À propos</p>
+        <p class="section-kicker" data-i18n="about.kicker">À propos</p>
         <div class="about-copy">
-          <h2 id="about-title">Une pratique médicale guidée par les données et centrée sur la personne.</h2>
-          <p>Médecin généraliste de formation, j’accompagne chaque patient avec une lecture globale de sa santé physique, mentale et émotionnelle. Mon parcours en médecine préventive, longévité et santé numérique nourrit une pratique rigoureuse, concrète et attentive aux objectifs de chacun.</p>
+          <h2 id="about-title" data-i18n="about.title">Une pratique médicale guidée par les données et centrée sur la personne.</h2>
+          <p data-i18n="about.text">Médecin généraliste de formation, j’accompagne chaque patient avec une lecture globale de sa santé physique, mentale et émotionnelle. Mon parcours en médecine préventive, longévité et santé numérique nourrit une pratique rigoureuse, concrète et attentive aux objectifs de chacun.</p>
+          <div class="consultation-languages" aria-label="Langues de consultation" data-aria-key="a11y.languages">
+            <span data-i18n="languages.label">Consultations disponibles en</span>
+            <strong data-i18n="languages.french">Français</strong>
+            <strong data-i18n="languages.english">Anglais</strong>
+            <strong data-i18n="languages.spanish">Espagnol</strong>
+          </div>
         </div>
-        <div class="credentials" aria-label="Formation et expérience">
+        <div class="credentials" aria-label="Formation et expérience" data-aria-key="a11y.credentials">
           <article>
-            <span class="credential-year">Formation</span>
-            <h3>Doctorat en médecine générale</h3>
+            <span class="credential-year" data-i18n="credentials.training.label">Formation</span>
+            <h3 data-i18n="credentials.training.title">Doctorat en médecine générale</h3>
             <p>Université Claude Bernard Lyon 1</p>
           </article>
           <article>
-            <span class="credential-year">Spécialisation</span>
-            <h3>Médecine anti-âge &amp; préventive</h3>
-            <p>Diplôme universitaire, UPEC</p>
+            <span class="credential-year" data-i18n="credentials.specialization.label">Spécialisation</span>
+            <h3 data-i18n="credentials.specialization.title">Médecine anti-âge &amp; préventive</h3>
+            <p data-i18n="credentials.specialization.school">Diplôme universitaire, UPEC</p>
           </article>
           <article>
-            <span class="credential-year">Expérience</span>
-            <h3>Stratégie clinique &amp; biomarqueurs</h3>
-            <p>Ancienne cofondatrice et directrice médicale de Lucis</p>
+            <span class="credential-year" data-i18n="credentials.experience.label">Expérience</span>
+            <h3 data-i18n="credentials.experience.title">Stratégie clinique &amp; biomarqueurs</h3>
+            <p data-i18n="credentials.experience.text">Ancienne cofondatrice et directrice médicale de Lucis</p>
           </article>
         </div>
       </div>
@@ -117,9 +132,9 @@
 
     <section class="approach section" id="approche" aria-labelledby="approach-title">
       <div class="section-heading reveal">
-        <p class="section-kicker">Mon approche</p>
-        <h2 id="approach-title">Observer l’ensemble.<br><em>Agir avec précision.</em></h2>
-        <p>La médecine fonctionnelle relie vos antécédents, votre mode de vie, vos symptômes et vos données biologiques. L’objectif est de définir des actions réalistes et utiles dans la durée.</p>
+        <p class="section-kicker" data-i18n="approach.kicker">Mon approche</p>
+        <h2 id="approach-title" data-i18n="approach.title">Observer l’ensemble.<br><em>Agir avec précision.</em></h2>
+        <p data-i18n="approach.intro">La médecine fonctionnelle relie vos antécédents, votre mode de vie, vos symptômes et vos données biologiques. L’objectif est de définir des actions réalistes et utiles dans la durée.</p>
       </div>
 
       <div class="pillars">
@@ -128,112 +143,112 @@
             <svg viewBox="0 0 48 48"><path d="M24 5v38M5 24h38"></path><circle cx="24" cy="24" r="15"></circle></svg>
           </div>
           <span>01</span>
-          <h3>Prévention</h3>
-          <p>Repérer les facteurs de risque et intervenir en amont pour préserver votre santé et votre qualité de vie.</p>
+          <h3 data-i18n="pillars.prevention.title">Prévention</h3>
+          <p data-i18n="pillars.prevention.text">Repérer les facteurs de risque et intervenir en amont pour préserver votre santé et votre qualité de vie.</p>
         </article>
         <article class="pillar reveal" data-delay="1">
           <div class="pillar-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48"><path d="M7 36 18 25l8 6 15-19"></path><path d="M34 12h7v7"></path><circle cx="18" cy="25" r="3"></circle></svg>
           </div>
           <span>02</span>
-          <h3>Données</h3>
-          <p>Appuyer les décisions sur votre histoire clinique, votre bilan biologique et les connaissances scientifiques disponibles.</p>
+          <h3 data-i18n="pillars.data.title">Données</h3>
+          <p data-i18n="pillars.data.text">Appuyer les décisions sur votre histoire clinique, votre bilan biologique et les connaissances scientifiques disponibles.</p>
         </article>
         <article class="pillar reveal" data-delay="2">
           <div class="pillar-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"></circle><path d="M24 7c6 5 9 11 9 17s-3 12-9 17c-6-5-9-11-9-17s3-12 9-17Z"></path><path d="M8 24h32"></path></svg>
           </div>
           <span>03</span>
-          <h3>Personnalisation</h3>
-          <p>Construire un plan adapté à votre profil, à vos priorités et à vos contraintes, sans protocole standardisé.</p>
+          <h3 data-i18n="pillars.personalization.title">Personnalisation</h3>
+          <p data-i18n="pillars.personalization.text">Construire un plan adapté à votre profil, à vos priorités et à vos contraintes, sans protocole standardisé.</p>
         </article>
       </div>
 
       <div class="approach-note reveal">
         <div class="note-mark" aria-hidden="true">“</div>
         <blockquote>
-          <p>La longévité ne consiste pas seulement à ajouter des années à la vie, mais à préserver la santé au fil des années.</p>
+          <p data-i18n="approach.quote">La longévité ne consiste pas seulement à ajouter des années à la vie, mais à préserver la santé au fil des années.</p>
         </blockquote>
-        <div class="note-topics" aria-label="Sujets abordés selon les besoins">
-          <span>Sommeil</span>
-          <span>Nutrition</span>
-          <span>Mouvement</span>
-          <span>Stress</span>
-          <span>Santé métabolique</span>
+        <div class="note-topics" aria-label="Sujets abordés selon les besoins" data-aria-key="a11y.topics">
+          <span data-i18n="topics.sleep">Sommeil</span>
+          <span data-i18n="topics.nutrition">Nutrition</span>
+          <span data-i18n="topics.movement">Mouvement</span>
+          <span data-i18n="topics.stress">Stress</span>
+          <span data-i18n="topics.metabolic">Santé métabolique</span>
         </div>
       </div>
     </section>
 
     <section class="booking section" id="rendez-vous" aria-labelledby="booking-title">
       <div class="booking-intro reveal">
-        <p class="section-kicker">Prendre rendez-vous</p>
+        <p class="section-kicker" data-i18n="booking.kicker">Prendre rendez-vous</p>
         <div class="booking-title">
-          <h2 id="booking-title">Prendre rendez-vous<br><em>par e-mail.</em></h2>
-          <p>Envoyez-moi plusieurs disponibilités dans les semaines à venir. Je vous répondrai avec une proposition de créneau.</p>
+          <h2 id="booking-title" data-i18n="booking.title">Prendre rendez-vous<br><em>par e-mail.</em></h2>
+          <p data-i18n="booking.intro">Envoyez-moi plusieurs disponibilités dans les semaines à venir. Je vous répondrai avec une proposition de créneau.</p>
         </div>
       </div>
 
       <div class="contact-card booking-contact reveal">
         <div class="booking-contact-copy">
-          <p class="panel-label">Étape suivante</p>
-          <h3>Proposez vos disponibilités.</h3>
-          <p>Le bouton ouvre un e-mail avec trois créneaux à compléter avant l’envoi.</p>
+          <p class="panel-label" data-i18n="booking.next">Étape suivante</p>
+          <h3 data-i18n="booking.availability.title">Proposez vos disponibilités.</h3>
+          <p data-i18n="booking.availability.text">Le bouton ouvre un e-mail avec trois créneaux à compléter avant l’envoi.</p>
         </div>
         <div class="booking-contact-action">
-          <a class="button button-contact" href="mailto:drlaplagne@gmail.com?subject=Demande%20de%20rendez-vous&amp;body=Bonjour%20Dr%20Laplagne%2C%0D%0A%0D%0AJe%20souhaite%20prendre%20rendez-vous.%0D%0A%0D%0AMes%20disponibilit%C3%A9s%20dans%20les%20semaines%20%C3%A0%20venir%20%3A%0D%0A-%20%0D%0A-%20%0D%0A-%20%0D%0A%0D%0ABien%20cordialement%2C">
-            <span>Préparer ma demande par e-mail</span>
+          <a class="button button-contact" href="mailto:drlaplagne@gmail.com" data-mail-link>
+            <span data-i18n="booking.button">Préparer ma demande par e-mail</span>
             <span aria-hidden="true">↗</span>
           </a>
           <a class="plain-email" href="mailto:drlaplagne@gmail.com">drlaplagne@gmail.com</a>
-          <small>Consultations exclusivement à distance</small>
+          <small data-i18n="booking.remote">Téléconsultations exclusivement · Français, anglais ou espagnol</small>
         </div>
       </div>
 
       <div class="journey-heading reveal">
-        <p class="panel-label">Déroulement du suivi</p>
-        <h3>Votre parcours, étape par étape.</h3>
+        <p class="panel-label" data-i18n="journey.kicker">Déroulement du suivi</p>
+        <h3 data-i18n="journey.title">Votre parcours, étape par étape.</h3>
       </div>
 
-      <div class="journey" aria-label="Déroulement du suivi">
+      <div class="journey" aria-label="Déroulement du suivi" data-aria-key="a11y.journey">
         <article class="journey-step reveal">
           <div class="step-number">01</div>
           <div>
-            <h3>Premier échange</h3>
-            <p>Nous faisons un bilan global de votre santé, de votre mode de vie et de vos objectifs.</p>
+            <h3 data-i18n="journey.first.title">Premier échange</h3>
+            <p data-i18n="journey.first.text">Nous faisons un bilan global de votre santé, de votre mode de vie et de vos objectifs.</p>
           </div>
         </article>
         <article class="journey-step reveal" data-delay="1">
           <div class="step-number">02</div>
           <div>
-            <h3>Bilan biologique</h3>
-            <p>Je prescris une prise de sang à réaliser dans votre laboratoire habituel, avec des analyses adaptées à votre profil.</p>
+            <h3 data-i18n="journey.blood.title">Bilan biologique</h3>
+            <p data-i18n="journey.blood.text">Je prescris une prise de sang à réaliser dans votre laboratoire habituel, avec des analyses adaptées à votre profil.</p>
           </div>
         </article>
         <article class="journey-step reveal" data-delay="2">
           <div class="step-number">03</div>
           <div>
-            <h3>Plan personnalisé</h3>
-            <p>Un second rendez-vous permet d’interpréter les résultats et de définir votre plan d’action.</p>
+            <h3 data-i18n="journey.plan.title">Plan personnalisé</h3>
+            <p data-i18n="journey.plan.text">Un second rendez-vous permet d’interpréter les résultats et de définir votre plan d’action.</p>
           </div>
         </article>
       </div>
 
       <div class="booking-panel pricing-panel reveal">
         <div class="pricing">
-          <p class="panel-label">Tarifs des téléconsultations</p>
+          <p class="panel-label" data-i18n="pricing.kicker">Tarifs des téléconsultations</p>
           <div class="price-list">
             <div class="price-item">
-              <span>Consultation approfondie</span>
+              <span data-i18n="pricing.full">Consultation approfondie</span>
               <strong>160 €</strong>
-              <small>60 minutes</small>
+              <small data-i18n="pricing.60min">60 minutes</small>
             </div>
             <div class="price-item">
-              <span>Consultation courte</span>
+              <span data-i18n="pricing.short">Consultation courte</span>
               <strong>100 €</strong>
-              <small>30 minutes</small>
+              <small data-i18n="pricing.30min">30 minutes</small>
             </div>
           </div>
-          <p class="coverage-note"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8"></circle><path d="M10 9v5M10 6.2v.2"></path></svg> Ces consultations sont proposées hors parcours de soins de l’Assurance Maladie et ne sont pas remboursées par la Sécurité sociale.</p>
+          <p class="coverage-note"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8"></circle><path d="M10 9v5M10 6.2v.2"></path></svg><span data-i18n="pricing.coverage">Ces consultations sont proposées hors parcours de soins de l’Assurance Maladie et ne sont pas remboursées par la Sécurité sociale.</span></p>
         </div>
       </div>
     </section>
@@ -242,13 +257,13 @@
   <footer class="site-footer">
     <div>
       <span class="footer-name">Dr Émilie Laplagne</span>
-      <span>Médecine fonctionnelle &amp; longévité</span>
+      <span data-i18n="footer.activity">Médecine fonctionnelle &amp; longévité</span>
     </div>
     <div class="footer-contact">
       <a href="mailto:drlaplagne@gmail.com">drlaplagne@gmail.com</a>
-      <span>Médecin basée à Paris</span>
+      <span data-i18n="footer.location">Médecin basée à Paris</span>
     </div>
-    <p class="emergency">En cas d’urgence médicale, appelez le 15 ou le 112.</p>
+    <p class="emergency" data-i18n="footer.emergency">En cas d’urgence médicale, appelez le 15 ou le 112.</p>
   </footer>
 
   <script src="script.js"></script>
